@@ -30,12 +30,4 @@ export default StyleSheet.create({
         marginTop: 5,
         marginBottom: 20,
     },
-    optional_login_container: {
-        width: wp('100%'),
-        alignItems: 'center',
-    },
-    login_with_text: {
-        color: 'black',
-        fontWeight: 'bold'
-    }
 })

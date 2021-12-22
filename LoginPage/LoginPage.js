@@ -2,7 +2,8 @@ import React from 'react';
 import { SafeAreaView, View, Text, TextInput } from 'react-native';
 import styles from './LoginPage.style';
 
-import Title from './TitleComponent/Title';
+import Title from './Components/TitleComponent/Title';
+import OptionalLogin from './Components/OptionalLoginComponent/OptionalLogin';
 
 export default function LoginPage(){
 
@@ -21,9 +22,8 @@ export default function LoginPage(){
                         style={styles.text_input}
                         placeholder='Password'
                     />
-                    <View style={styles.optional_login_container}>
-                        <Text style={styles.login_with_text}>Login With</Text>
-                    </View>
+                    <OptionalLogin text='Login with'/>
+                    
                 </View>
             </View>
         </SafeAreaView>
