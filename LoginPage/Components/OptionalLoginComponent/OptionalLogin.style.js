@@ -9,5 +9,11 @@ export default StyleSheet.create({
     text: {
         color: 'black',
         fontWeight: 'bold'
+    },
+    icons: {
+        flexDirection: 'row',
+        width: wp('60%'),
+        justifyContent: 'space-evenly',
+        marginTop: 10,
     }
 })

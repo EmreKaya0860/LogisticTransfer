@@ -2,17 +2,17 @@ import { StyleSheet } from "react-native";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 export default StyleSheet.create({
-    container: {
+    container:{
         width: wp('100%'),
-        height: hp('100%'),
+        height: hp('100%')
     },
-    body: {
+    body:{
         width: wp('100%'),
         height: hp('100%'),
         position: 'absolute',
         justifyContent: 'flex-end'
     },
-    inner_body:{
+    inner_boddy: {
         width: wp('100%'),
         height: hp('73%'),
         marginLeft: 13,
@@ -38,13 +38,8 @@ export default StyleSheet.create({
     footer: {
         width: wp('100%'),
         backgroundColor: 'red',
-        height: hp('36%'),
-        justifyContent: 'flex-end',
-        alignItems: 'center'
-    },
-    footer_text: {
-        flexDirection: 'row',
-        justifyContent: 'center'
-        
+        height: hp('23.2%'),
+        alignItems: 'center',
+        justifyContent: 'flex-end'
     }
 })
