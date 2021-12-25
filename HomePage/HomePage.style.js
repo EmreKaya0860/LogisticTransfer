@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { StyleSheet } from "react-native";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
@@ -7,7 +8,6 @@ export default StyleSheet.create({
         height: hp('100%'),
         flex: 1,
         marginLeft: wp('5%'),
-        
     },
     top_container: {
         width: wp('90%'),
@@ -38,12 +38,24 @@ export default StyleSheet.create({
     name_text: {
         fontWeight: 'bold',
         fontSize: 25,
-        color: 'black',
+        color: '#191849',
         marginLeft: wp('5%')
     },
     inner_body: {
         width: wp('80%'),
         marginLeft: wp('4%')
-
+    },
+    information_box: {
+        width: wp('80%'),
+        height:hp('10%'),
+        marginTop: hp('1%'),
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: 'red',
+    },
+    current_location: {
+        height: hp('4.5%'),
+        width: wp('15.2%'),
+        backgroundColor: 'orange',
     }
 })

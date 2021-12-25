@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import { SafeAreaView, View, Text, TextInput, TouchableOpacity} from 'react-native';
 import styles from './RegisterPage.style';
@@ -9,7 +10,7 @@ export default function RegisterPage() {
 
     return(
         <SafeAreaView style={styles.container}>
-            <Title />
+            <Title text='Register'/>
             <View style={styles.body}>
                 <View style={styles.inner_boddy}>
                     <Text style={styles.text}>Username</Text>
@@ -29,12 +30,17 @@ export default function RegisterPage() {
                     />
                     <OptionalLogin text='Or register with'/>
                     <View style={styles.footer}>
-                        <TouchableOpacity>
-                            <Text style={styles.reminder_text}>Already have an account!</Text>
+                        <View style={styles.reminder_text_container}>
+                            <TouchableOpacity>
+                                <Text style={styles.reminder_text}>Already have an account!</Text>
+                            </TouchableOpacity>
+                        </View>
+                        <TouchableOpacity style={styles.register_button}>
+                            <Text style={styles.register_button_title}>Register</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text>Register</Text>
-                        </TouchableOpacity>
+                        <View style={styles.home_indicator_light_container}>
+                            <View style={styles.home_indicator_light}></View>
+                        </View>
                     </View>
                 </View>
             </View>
