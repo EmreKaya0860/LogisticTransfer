@@ -10,17 +10,22 @@ import Logo from './assets/Top_Logo.svg';
 import Profile from './assets/PP.svg';
 import Arrow from './assets/Arrow.svg';
 
+import Home from './assets/Icons/Home.svg';
+import Create from './assets/Icons/Create.svg';
+import Search from './assets/Icons/Search.svg';
+import NavProfile from './assets/Icons/Profile.svg';
+
 export default function HomePage(){
 
     return (
         <SafeAreaView style={styles.container}>
            <View style={styles.top_container}>
-            <Logo/>
-            <View style= {styles.icon_container}>
-                <MaterialIcon name="lightning-bolt-outline" size={27} color="grey"/>
-                <IonIcon name="notifications-outline" size={27} color="grey"/>
-                <MaterialIcon name="dots-vertical" size={27} color="grey"/>
-            </View>
+                <Logo/>
+                <View style= {styles.icon_container}>
+                    <MaterialIcon name="lightning-bolt-outline" size={27} color="grey"/>
+                    <IonIcon name="notifications-outline" size={27} color="grey"/>
+                    <MaterialIcon name="dots-vertical" size={27} color="grey"/>
+             </View>
            </View>
            <View style={styles.body}>
                 <View style={styles.user_info}>
@@ -56,9 +61,37 @@ export default function HomePage(){
            </View>
            <View style={styles.footer}>
                <Image source={require('./assets/HeadImage.png')} style={styles.head_image}/>
-               <View style={styles.user_info}>
+               <View style={styles.footer_user_info}>
                    <Profile />
-                   
+                   <Text style={styles.footer_name_text}>John D.</Text>
+               </View>
+               <View style={styles.explain_text}>
+                    <Text>Lorem ipsum dolor sit amet, consectetur adipiscing</Text>
+               </View>
+           </View>
+           <View style={styles.navigation_container}>
+               <View style={styles.navigation}>
+                    <View style={styles.nav_icons_container}>
+                        <View>
+                            <Home />
+                            <Text>Home</Text>
+                        </View>
+                        <View>
+                            <Create />
+                            <Text>Create</Text>
+                        </View>
+                        <View>
+                            <Search />
+                            <Text>Search</Text>
+                        </View>
+                        <View>
+                            <NavProfile />
+                            <Text>Profile</Text>
+                        </View>
+                    </View>
+                    <View style={styles.home_indicator_light_container}>
+                            <View style={styles.home_indicator_light}></View>
+                        </View>
                </View>
            </View>
         </SafeAreaView>
