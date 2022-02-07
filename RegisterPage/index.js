@@ -1,1 +1,2 @@
-export {default} from './RegisterPage'
+/* eslint-disable prettier/prettier */
+export {default} from './RegisterPage';

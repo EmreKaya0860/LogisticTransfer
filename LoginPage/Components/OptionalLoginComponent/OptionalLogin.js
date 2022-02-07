@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import styles from './OptionalLogin.style';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -14,9 +14,15 @@ export default function OptionalLogin(props){
         <View style={styles.container}>
             <Text style={styles.text}>{props.text}</Text>
             <View style={styles.icons}>
-              <Google style={{elevation: 1}}/>
-              <Apple />
-              <Facebook />
+              <TouchableOpacity>
+                <Google style={{elevation: 1}}/>
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Apple />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Facebook />
+              </TouchableOpacity>
             </View>
         </View>
     );

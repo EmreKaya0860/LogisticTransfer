@@ -6,7 +6,15 @@ import styles from './RegisterPage.style';
 import Title from '../LoginPage/Components/TitleComponent/Title';
 import OptionalLogin from '../LoginPage/Components/OptionalLoginComponent/OptionalLogin';
 
-export default function RegisterPage() {
+export default function RegisterPage(props) {
+
+    function NavigateToHome(){
+        props.navigation.navigate('HomePage');
+    }
+     
+    function NavigateToLogin(){
+        props.navigation.navigate('LoginPage');
+    }
 
     return(
         <SafeAreaView style={styles.container}>
@@ -31,11 +39,11 @@ export default function RegisterPage() {
                     <OptionalLogin text='Or register with'/>
                     <View style={styles.footer}>
                         <View style={styles.reminder_text_container}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={NavigateToLogin}>
                                 <Text style={styles.reminder_text}>Already have an account!</Text>
                             </TouchableOpacity>
                         </View>
-                        <TouchableOpacity style={styles.register_button}>
+                        <TouchableOpacity style={styles.register_button} onPress={NavigateToHome}>
                             <Text style={styles.register_button_title}>Register</Text>
                         </TouchableOpacity>
                         <View style={styles.home_indicator_light_container}>

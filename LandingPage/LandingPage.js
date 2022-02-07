@@ -6,7 +6,15 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 import Title from './assets/Title.svg';
 
-export default function LandingPage(){
+export default function LandingPage(props){
+
+  function NavigateToLogin(){
+    props.navigation.navigate('LoginPage');
+  }
+
+  function NavigateToRegister(){
+    props.navigation.navigate('RegisterPage');
+  }
 
   return (
     <SafeAreaView style={styles.background}>
@@ -21,10 +29,10 @@ export default function LandingPage(){
           </View>
         </View>
         <View style={styles.footer}>
-          <TouchableOpacity style={styles.login_button}>
+          <TouchableOpacity style={styles.login_button} onPress={NavigateToLogin}>
             <Text style={styles.login_button_title}>Login</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.register_button}>
+          <TouchableOpacity style={styles.register_button} onPress={NavigateToRegister}>
             <Text style={styles.login_button_title}>Register</Text>
           </TouchableOpacity>
           <View style={styles.home_indicator_light_container}>

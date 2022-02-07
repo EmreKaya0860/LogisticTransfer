@@ -6,7 +6,15 @@ import styles from './LoginPage.style';
 import Title from './Components/TitleComponent/Title';
 import OptionalLogin from './Components/OptionalLoginComponent/OptionalLogin';
 
-export default function LoginPage(){
+export default function LoginPage(props){
+
+    function NavigateToRegister(){
+        props.navigation.navigate('RegisterPage');
+    }
+
+    function NavigateToHome(){
+        props.navigation.navigate('HomePage');
+    }
 
     return(
         <SafeAreaView style={styles.container}>
@@ -27,7 +35,7 @@ export default function LoginPage(){
                     <View style={styles.footer}>
                         <View style={styles.footer_text}>
                             <Text style={{color:'black', fontSize:16}}>Not degistered yet? </Text>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={NavigateToRegister}>
                                 <Text style={styles.reminder_text}>Register now!</Text>
                             </TouchableOpacity>
                         </View>
@@ -36,7 +44,7 @@ export default function LoginPage(){
                                 <Text style={styles.reminder_text}>Forgot password?</Text>
                             </TouchableOpacity>
                         </View>
-                        <TouchableOpacity style={styles.login_button}>
+                        <TouchableOpacity style={styles.login_button} onPress={NavigateToHome}>
                             <Text style={styles.login_button_title}>Login</Text>
                         </TouchableOpacity>
                         <View style={styles.home_indicator_light_container}>

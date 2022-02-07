@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import { SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import styles from './MenuPage.style';
@@ -12,9 +13,13 @@ import Versions from './assets/MenuIcons/Versions.svg';
 import Warning from './assets/MenuIcons/Warning_hex.svg';
 
 
-export default function MenuPage(){
+export default function MenuPage(props){
 
-    return(
+    function NavigateToSettings(){
+        props.navigation.navigate("SettingsPage");
+    }
+
+    return (
         <SafeAreaView style={styles.container}>
             <View style={styles.profile_information_container}>
                 <PP width={80} height={80}/>
@@ -44,7 +49,7 @@ export default function MenuPage(){
                         <Warning />
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={NavigateToSettings}>
                     <View style={styles.button_container}>
                         <Text style={styles.buttons_title}>Ayarlar</Text>
                         <Settings />
