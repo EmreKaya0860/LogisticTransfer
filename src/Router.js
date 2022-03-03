@@ -8,7 +8,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import HomePage from '../HomePage/HomePage';
-import CreatePage from '../Create/Create';
+import CreatePage from '../CreatePage/CreatePage';
 import ProfilePage from '../TruckDriverProfilePage/Gallery/Gallery';
 import MenuPage from '../MenuPage/MenuPage';
 import SearchPage from '../SearchPage/SearchPage';
